@@ -32,7 +32,7 @@ const handleSubmit = () => {
 					<form @submit.prevent="handleSubmit" class="space-y-6">
 						<div class="grid md:grid-cols-2 gap-6">
 							<div>
-								<label class="block text-gray-300 mb-2">Name</label>
+								<label class="block text-gray-400 mb-2">Name</label>
 								<input v-model="form.name" type="text" required
 								       class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg
                                 focus:border-purple-500 focus:outline-none transition duration-300 text-gray-300">
