@@ -35,26 +35,26 @@ const handleSubmit = () => {
 								<label class="block text-gray-300 mb-2">Name</label>
 								<input v-model="form.name" type="text" required
 								       class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg
-                                focus:border-purple-500 focus:outline-none transition duration-300">
+                                focus:border-purple-500 focus:outline-none transition duration-300 text-gray-300">
 							</div>
 							<div>
 								<label class="block text-gray-400 mb-2">Email</label>
 								<input v-model="form.email" type="email" required
 								       class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg
-                                focus:border-purple-500 focus:outline-none transition duration-300">
+                                focus:border-purple-500 focus:outline-none transition duration-300 text-gray-300">
 							</div>
 						</div>
 						<div>
 							<label class="block text-gray-400 mb-2">Subject</label>
 							<input v-model="form.subject" type="text" required
 							       class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg
-                              focus:border-purple-500 focus:outline-none transition duration-300">
+                              focus:border-purple-500 focus:outline-none transition duration-300 text-gray-300">
 						</div>
 						<div>
 							<label class="block text-gray-400 mb-2">Message</label>
 							<textarea v-model="form.message" rows="4" required
 							          class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg
-                                 focus:border-purple-500 focus:outline-none transition duration-300"></textarea>
+                                 focus:border-purple-500 focus:outline-none transition duration-300 text-gray-300"></textarea>
 						</div>
 						<button type="submit"
 						        class="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600
