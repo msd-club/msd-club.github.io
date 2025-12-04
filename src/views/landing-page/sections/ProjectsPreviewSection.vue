@@ -10,7 +10,7 @@
 				</p>
 			</div>
 			
-			<div class="grid md:grid-cols-3 gap-8">
+			<div class="grid md:grid-cols-2 gap-8">
 				<!-- Current Project: LMS API -->
 				<div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-gray-700
                   hover:border-purple-500 transition duration-300 transform hover:-translate-y-2 group relative">
@@ -76,29 +76,7 @@
 						</div>
 					</div>
 				</div>
-				
-				<!-- Automation Project -->
-				<div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-gray-700
-                  hover:border-blue-500 transition duration-300 transform hover:-translate-y-2 group">
-					<div
-							class="h-48 bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center group-hover:from-blue-700 group-hover:to-cyan-700 transition duration-300">
-						<i class='bx bx-bot text-6xl text-white'></i>
-					</div>
-					<div class="p-6">
-						<h3 class="text-xl font-bold mb-3 text-blue-300">Campus Automation Tools</h3>
-						<p class="text-gray-400 mb-4">Python scripts and automation tools for administrative tasks at
-							CSU-Carig</p>
-						<div class="flex flex-wrap gap-2">
-							<span class="px-3 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded-full text-sm">Python</span>
-							<span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm">Automation</span>
-							<span class="px-3 py-1 bg-green-900 bg-opacity-50 text-green-300 rounded-full text-sm">Scripting</span>
-						</div>
-						<div class="mt-4 pt-4 border-t border-gray-700">
-							<p class="text-sm text-gray-500">Examples: Report generators, data migrators, batch processors</p>
-						</div>
-					</div>
 				</div>
-			</div>
 			
 			<!-- Additional Project Info Section -->
 			<div class="mt-16 grid md:grid-cols-2 gap-8">
