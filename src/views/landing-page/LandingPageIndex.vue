@@ -6,6 +6,7 @@ import AdditionalAboutSection from '@/views/landing-page/sections/AdditionalAbou
 import MemberSection from '@/views/landing-page/sections/MemberSection.vue'
 import VisionMissionSection from '@/views/landing-page/sections/VisionMissionSection.vue'
 import ProjectsPreviewSection from '@/views/landing-page/sections/ProjectsPreviewSection.vue'
+import BlogSection from "@/views/landing-page/sections/BlogSection.vue";
 </script>
 
 <template>
@@ -16,5 +17,6 @@ import ProjectsPreviewSection from '@/views/landing-page/sections/ProjectsPrevie
 		<VisionMissionSection/>
 		<ProjectsPreviewSection/>
 		<MemberSection/>
+		<BlogSection/>
 	</MainLayout>
 </template>

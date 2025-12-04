@@ -18,39 +18,42 @@
 			</div>
 			
 			<div class="grid md:grid-cols-3 gap-8">
+				<!-- Frontend Basics -->
 				<div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-gray-700
-					            hover:border-amber-500 transition duration-300 transform hover:-translate-y-2">
+              hover:border-pink-500 transition duration-300 transform hover:-translate-y-2">
 					<div class="p-6">
-              <span
-		              class="inline-block px-3 py-1 bg-gradient-to-r from-emerald-900 to-emerald-700 text-emerald-300 rounded-full text-sm mb-4">
-                <i class='bx bx-code-alt mr-1'></i> Tutorial
-              </span>
-						<h3 class="text-xl font-bold mb-3 text-emerald-300">Getting Started with Microservices</h3>
-						<p class="text-gray-400 mb-4">Learn how to design and implement your first microservice architecture with
-							practical examples</p>
+			      <span
+					      class="inline-block px-3 py-1 bg-gradient-to-r from-pink-900 to-pink-700 text-pink-300 rounded-full text-sm mb-4">
+			        <i class='bx bx-code-alt mr-1'></i> Tutorial
+			      </span>
+						<h3 class="text-xl font-bold mb-3 text-pink-300">Frontend Basics</h3>
+						<p class="text-gray-400 mb-4">Learn HTML, CSS, and JavaScript essentials to build your first interactive web
+							pages.</p>
 						<div class="flex items-center justify-between">
 							<div class="flex items-center text-gray-500 text-sm">
-								<i class='bx bx-calendar mr-2'></i> 2 days ago
+								<i class='bx bx-calendar mr-2'></i> Updated recently
 							</div>
-							<button class="text-emerald-400 hover:text-emerald-300 flex items-center text-sm">
+							<button class="text-pink-400 hover:text-pink-300 flex items-center text-sm">
 								Read More <i class='bx bx-chevron-right ml-1'></i>
 							</button>
 						</div>
 					</div>
 				</div>
 				
+				<!-- Advanced Frontend -->
 				<div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-gray-700
-					            hover:border-blue-500 transition duration-300 transform hover:-translate-y-2">
+              hover:border-blue-500 transition duration-300 transform hover:-translate-y-2">
 					<div class="p-6">
-              <span
-		              class="inline-block px-3 py-1 bg-gradient-to-r from-blue-900 to-blue-700 text-blue-300 rounded-full text-sm mb-4">
-                <i class='bx bx-code mr-1'></i> Tech
-              </span>
-						<h3 class="text-xl font-bold mb-3 text-blue-300">Vue 3 Composition API Tips</h3>
-						<p class="text-gray-400 mb-4">Best practices for using the Composition API in production applications</p>
+			      <span
+					      class="inline-block px-3 py-1 bg-gradient-to-r from-blue-900 to-blue-700 text-blue-300 rounded-full text-sm mb-4">
+			        <i class='bx bx-layout mr-1'></i> Tutorial
+			      </span>
+						<h3 class="text-xl font-bold mb-3 text-blue-300">Advanced Frontend</h3>
+						<p class="text-gray-400 mb-4">Master Vue 3, state management, and TailwindCSS for polished, scalable
+							applications.</p>
 						<div class="flex items-center justify-between">
 							<div class="flex items-center text-gray-500 text-sm">
-								<i class='bx bx-calendar mr-2'></i> 1 week ago
+								<i class='bx bx-calendar mr-2'></i> Updated recently
 							</div>
 							<button class="text-blue-400 hover:text-blue-300 flex items-center text-sm">
 								Read More <i class='bx bx-chevron-right ml-1'></i>
@@ -59,20 +62,22 @@
 					</div>
 				</div>
 				
+				<!-- Backend Basics -->
 				<div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-gray-700
-					            hover:border-purple-500 transition duration-300 transform hover:-translate-y-2">
+              hover:border-green-500 transition duration-300 transform hover:-translate-y-2">
 					<div class="p-6">
-              <span
-		              class="inline-block px-3 py-1 bg-gradient-to-r from-purple-900 to-purple-700 text-purple-300 rounded-full text-sm mb-4">
-                <i class='bx bx-bar-chart-alt mr-1'></i> Case Study
-              </span>
-						<h3 class="text-xl font-bold mb-3 text-purple-300">Automation Success Story</h3>
-						<p class="text-gray-400 mb-4">How we saved 40 hours/month with our latest automation tool deployment</p>
+			      <span
+					      class="inline-block px-3 py-1 bg-gradient-to-r from-green-900 to-green-700 text-green-300 rounded-full text-sm mb-4">
+			        <i class='bx bx-server mr-1'></i> Tutorial
+			      </span>
+						<h3 class="text-xl font-bold mb-3 text-green-300">Backend Basics</h3>
+						<p class="text-gray-400 mb-4">Understand servers, databases, and APIs with Django or Express.js
+							fundamentals.</p>
 						<div class="flex items-center justify-between">
 							<div class="flex items-center text-gray-500 text-sm">
-								<i class='bx bx-calendar mr-2'></i> 2 weeks ago
+								<i class='bx bx-calendar mr-2'></i> Updated recently
 							</div>
-							<button class="text-purple-400 hover:text-purple-300 flex items-center text-sm">
+							<button class="text-green-400 hover:text-green-300 flex items-center text-sm">
 								Read More <i class='bx bx-chevron-right ml-1'></i>
 							</button>
 						</div>
