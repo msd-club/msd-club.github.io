@@ -7,15 +7,9 @@ const form = reactive({
 	lastName: '',
 	yearLevel: '',
 	email: '',
-	password: '',
-	confirmPassword: '',
-	expertise: '',
+	about: '',           // renamed from expertise
 	profilePicture: null as File | null
 });
-
-// Password visibility toggle
-const showPassword = ref(false);
-const showConfirmPassword = ref(false);
 
 const yearOptions = ["1st Year", "2nd Year", "3rd Year", "4th Year", "5th Year"];
 const message = ref(''); // message above register button
@@ -42,8 +36,8 @@ const previewUrl = computed(() => form.profilePicture ? URL.createObjectURL(form
 
 // Handle register
 const handleRegister = () => {
-	if (form.password !== form.confirmPassword) {
-		message.value = "Passwords do not match!";
+	if (!form.firstName || !form.lastName || !form.yearLevel || !form.email) {
+		message.value = "Please fill in all required fields!";
 		return;
 	}
 	
@@ -52,7 +46,7 @@ const handleRegister = () => {
 	
 	// Reset form except profile picture for demo
 	Object.keys(form).forEach(key => {
-		if (key !== 'profilePicture') form[key] = '';
+		if (key !== 'profilePicture') (form as any)[key] = '';
 	});
 };
 </script>
@@ -60,6 +54,7 @@ const handleRegister = () => {
 <template>
 	<main
 			class="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white flex flex-col items-center py-16 px-4">
+		
 		<div class="bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-4xl">
 			<h2 class="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
 				Join the Club
@@ -97,39 +92,11 @@ const handleRegister = () => {
 					       class="w-full px-4 py-2 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 text-white"/>
 				</div>
 				
-				<!-- Password -->
-				<div>
-					<label class="block text-gray-300 mb-1">Password</label>
-					<div class="relative">
-						<input :type="showPassword ? 'text' : 'password'" v-model="form.password" placeholder="Enter password"
-						       required
-						       class="w-full px-4 py-2 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 text-white"/>
-						<button type="button" @click="showPassword = !showPassword"
-						        class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-purple-400">
-							<i :class="showPassword ? 'bx bx-show' : 'bx bx-hide'"></i>
-						</button>
-					</div>
-				</div>
-				
-				<!-- Confirm Password -->
-				<div>
-					<label class="block text-gray-300 mb-1">Confirm Password</label>
-					<div class="relative">
-						<input :type="showConfirmPassword ? 'text' : 'password'" v-model="form.confirmPassword"
-						       placeholder="Confirm password" required
-						       class="w-full px-4 py-2 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 text-white"/>
-						<button type="button" @click="showConfirmPassword = !showConfirmPassword"
-						        class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-purple-400">
-							<i :class="showConfirmPassword ? 'bx bx-show' : 'bx bx-hide'"></i>
-						</button>
-					</div>
-				</div>
-				
 				<!-- About Yourself -->
 				<div class="md:col-span-2">
 					<label class="block text-gray-300 mb-1">About Yourself</label>
 					<textarea
-							v-model="form.expertise"
+							v-model="form.about"
 							rows="3"
 							placeholder="Tell us about yourself, your interests, or what skills you want to share"
 							class="w-full px-4 py-2 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 text-white"
@@ -167,7 +134,8 @@ const handleRegister = () => {
 				
 				<!-- Submit button & Back to Home -->
 				<div class="md:col-span-2 flex flex-col items-center">
-					<button type="submit" class="w-full py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition duration-300 flex justify-center items-center">
+					<button type="submit"
+					        class="w-full py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition duration-300 flex justify-center items-center">
 						<i class='bx bx-user-plus mr-2'></i> Register
 					</button>
 					<router-link to="/" class="mt-4 text-sm text-purple-300 hover:text-pink-400">Back to Home</router-link>
