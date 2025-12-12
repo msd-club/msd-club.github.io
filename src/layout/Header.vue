@@ -21,27 +21,28 @@ const isOpen = ref(false);
 			
 			<!-- Desktop Nav -->
 			<div class="hidden md:flex items-center space-x-8">
-				<router-link to="#home" class="hover:text-purple-400 text-gray-400 transition duration-300 flex items-center">
+				<router-link to="/#home" class="hover:text-purple-400 text-gray-400 transition duration-300 flex items-center">
 					<i class='bx bx-home-alt-2 mr-2'></i> Home
 				</router-link>
-				<router-link to="#about" class="hover:text-purple-400 text-gray-400 transition duration-300 flex items-center">
+				<router-link to="/#about" class="hover:text-purple-400 text-gray-400 transition duration-300 flex items-center">
 					<i class='bx bx-info-circle mr-2'></i> About
 				</router-link>
-				<router-link to="#vision" class="hover:text-purple-400 text-gray-400 transition duration-300 flex items-center">
+				<router-link to="/#vision"
+				             class="hover:text-purple-400 text-gray-400 transition duration-300 flex items-center">
 					<i class='bx bx-bullseye mr-2'></i> Vision
 				</router-link>
-				<router-link to="#projects"
+				<router-link to="/#projects"
 				             class="hover:text-purple-400 text-gray-400 transition duration-300 flex items-center">
 					<i class='bx bx-cube-alt mr-2'></i> Projects
 				</router-link>
-				<router-link to="#members"
+				<router-link to="/#members"
 				             class="hover:text-purple-400 text-gray-400 transition duration-300 flex items-center">
 					<i class='bx bx-group mr-2'></i> Team
 				</router-link>
-				<router-link to="#blog" class="hover:text-purple-400 text-gray-400 transition duration-300 flex items-center">
+				<router-link to="/#blog" class="hover:text-purple-400 text-gray-400 transition duration-300 flex items-center">
 					<i class='bx bx-news mr-2'></i> Blog
 				</router-link>
-				<router-link to="#contact" class="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg font-semibold
+				<router-link to="/#contact" class="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg font-semibold
                         hover:from-purple-600 hover:to-pink-600 transition duration-300">
 					Contact Us
 				</router-link>
@@ -65,23 +66,23 @@ const isOpen = ref(false);
 				
 				<!-- Nav Links -->
 				<div class="flex flex-col items-center justify-center flex-grow space-y-6 text-lg font-semibold">
-					<router-link @click="isOpen = false" to="#home" class="text-gray-200 hover:text-purple-400 transition">Home
+					<router-link @click="isOpen = false" to="/#home" class="text-gray-200 hover:text-purple-400 transition">Home
 					</router-link>
-					<router-link @click="isOpen = false" to="#about" class="text-gray-200 hover:text-purple-400 transition">
+					<router-link @click="isOpen = false" to="/#about" class="text-gray-200 hover:text-purple-400 transition">
 						About
 					</router-link>
-					<router-link @click="isOpen = false" to="#vision" class="text-gray-200 hover:text-purple-400 transition">
+					<router-link @click="isOpen = false" to="/#vision" class="text-gray-200 hover:text-purple-400 transition">
 						Vision
 					</router-link>
-					<router-link @click="isOpen = false" to="#projects" class="text-gray-200 hover:text-purple-400 transition">
+					<router-link @click="isOpen = false" to="/#projects" class="text-gray-200 hover:text-purple-400 transition">
 						Projects
 					</router-link>
-					<router-link @click="isOpen = false" to="#members" class="text-gray-200 hover:text-purple-400 transition">
+					<router-link @click="isOpen = false" to="/#members" class="text-gray-200 hover:text-purple-400 transition">
 						Team
 					</router-link>
-					<router-link @click="isOpen = false" to="#blog" class="text-gray-200 hover:text-purple-400 transition">Blog
+					<router-link @click="isOpen = false" to="/#blog" class="text-gray-200 hover:text-purple-400 transition">Blog
 					</router-link>
-					<router-link @click="isOpen = false" to="#contact"
+					<router-link @click="isOpen = false" to="/#contact"
 					             class="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg hover:from-purple-600 hover:to-pink-600 transition">
 						Contact Us
 					</router-link>

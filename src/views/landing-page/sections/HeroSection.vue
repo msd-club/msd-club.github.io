@@ -34,10 +34,10 @@
 			</p>
 			
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
-				<button class="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600
+				<router-link to="/register" class="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600
                         rounded-xl font-semibold transition duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg">
 					<i class='bx bx-joystick mr-3 text-xl'></i>Join Our Club
-				</button>
+				</router-link>
 				<button class="px-8 py-4 bg-gray-700 hover:bg-gray-600 rounded-xl font-semibold
                         transition duration-300 transform hover:scale-105 flex items-center justify-center">
 					<i class='bx bx-play-circle mr-3 text-xl'></i>View Projects
