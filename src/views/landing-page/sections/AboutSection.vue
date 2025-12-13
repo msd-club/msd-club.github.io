@@ -1,9 +1,4 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-	<!-- About Section -->
 	<section id="about" class="py-16 sm:py-24">
 		<div class="w-[90%] mx-auto px-4 sm:px-6">
 			<div class="text-center mb-16">
@@ -51,9 +46,4 @@
 			</div>
 		</div>
 	</section>
-
 </template>
-
-<style scoped>
-
-</style>

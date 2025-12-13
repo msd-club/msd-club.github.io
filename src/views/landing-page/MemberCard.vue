@@ -1,4 +1,19 @@
-<!-- Member Card Component -->
+<script setup lang="ts">
+import { defineProps } from 'vue'
+
+interface MemberProps {
+	member: {
+		id: number
+		name: string
+		role: string
+		expertise: string[]
+		avatarColor: string
+	}
+}
+
+defineProps<MemberProps>()
+</script>
+
 <template>
 	<div class="member-card">
 		<div class="flex items-center mb-6">
@@ -29,22 +44,6 @@
 		</div>
 	</div>
 </template>
-
-<script setup lang="ts">
-import { defineProps } from 'vue'
-
-interface MemberProps {
-	member: {
-		id: number
-		name: string
-		role: string
-		expertise: string[]
-		avatarColor: string
-	}
-}
-
-defineProps<MemberProps>()
-</script>
 
 <style scoped>
 .member-card {

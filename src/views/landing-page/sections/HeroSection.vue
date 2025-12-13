@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
 	<section id="home" class="w-[90%] mx-auto px-4 sm:px-6 py-16 sm:py-24 relative">
 		<div
@@ -38,14 +34,14 @@
                         rounded-xl font-semibold transition duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg">
 					<i class='bx bx-joystick mr-3 text-xl'></i>Join Our Club
 				</router-link>
-				<button class="px-8 py-4 bg-gray-700 hover:bg-gray-600 rounded-xl font-semibold
+				<router-link to="/#projects" class="px-8 py-4 bg-gray-700 hover:bg-gray-600 rounded-xl font-semibold
                         transition duration-300 transform hover:scale-105 flex items-center justify-center">
 					<i class='bx bx-play-circle mr-3 text-xl'></i>View Projects
-				</button>
-				<button class="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-xl font-semibold
+				</router-link>
+				<router-link to="/events" class="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-xl font-semibold
                         transition duration-300 transform hover:scale-105 flex items-center justify-center">
 					<i class='bx bx-calendar mr-3 text-xl'></i>Upcoming Events
-				</button>
+				</router-link>
 			</div>
 		</div>
 	</section>

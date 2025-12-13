@@ -91,7 +91,7 @@ const visibleMembers = computed(() => {
 			<div class="flex justify-center mb-8">
 				<button @click="showAllMembers = !showAllMembers"
 				        class="px-6 py-2 rounded-full border border-blue-500 hover:bg-blue-500/10 transition duration-300
-                     flex items-center text-blue-300">
+                     flex items-center text-blue-300 cursor-pointer">
 					<i class='bx bx-group mr-2'></i>
 					{{ showAllMembers ? 'Show Executive Officers Only' : 'Show All Members (' + members.length + ')' }}
 					<i :class="['bx ml-2 transition-transform duration-300', showAllMembers ? 'bx-chevron-up' : 'bx-chevron-down']"></i>
@@ -189,7 +189,7 @@ const visibleMembers = computed(() => {
 				<button @click="showAllMembers = !showAllMembers"
 				        class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600
                      rounded-xl font-semibold transition duration-300 transform hover:scale-105
-                     flex items-center justify-center mx-auto">
+                     flex items-center justify-center mx-auto cursor-pointer">
 					<i :class="['bx mr-2', showAllMembers ? 'bx-chevron-up' : 'bx-chevron-down']"></i>
 					{{ showAllMembers ? 'Show Executive Officers Only' : 'View All Club Members (' + members.length + ')' }}
 				</button>

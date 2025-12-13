@@ -1,5 +1,4 @@
 <template>
-	<!-- Add this after About Section -->
 	<section class="py-12 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
 		<div class="w-[90%] mx-auto px-4 sm:px-6 text-center">
 			<h3 class="text-2xl font-bold mb-4">Officially Recognized by</h3>

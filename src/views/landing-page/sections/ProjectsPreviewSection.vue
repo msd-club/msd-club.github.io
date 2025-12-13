@@ -150,10 +150,10 @@
 			</div>
 			
 			<div class="text-center mt-12">
-				<button class="px-8 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600
+				<router-link to="/projects" class="px-8 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 max-w-fit
                          rounded-xl font-semibold transition duration-300 transform hover:scale-105 flex items-center justify-center mx-auto shadow-lg">
 					<i class='bx bx-folder-open mr-3 text-xl'></i>View All Projects
-				</button>
+				</router-link>
 			</div>
 			
 			<!-- Tech Stack Section -->
