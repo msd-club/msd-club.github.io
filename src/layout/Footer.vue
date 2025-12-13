@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import {computed, reactive} from "vue";
+import {computed, reactive, ref} from "vue";
+import {db} from "@/firebase";
+import {doc, serverTimestamp, setDoc} from "firebase/firestore";
 import type {ContactForm} from "@/types/ContactForm.ts";
 
 const form = reactive<ContactForm>({
@@ -7,19 +9,44 @@ const form = reactive<ContactForm>({
 	email: '',
 	subject: '',
 	message: ''
-})
+});
 
-const currentYear = computed(() => new Date().getFullYear())
+const currentYear = computed(() => new Date().getFullYear());
+const messageFeedback = ref('');
+const isSubmitting = ref(false);
 
-const handleSubmit = () => {
-	console.log('Form submitted:', form)
-	alert('Thank you for your message! We will get back to you soon.')
+const handleSubmit = async () => {
+	if (isSubmitting.value) return;
+	isSubmitting.value = true;
+	messageFeedback.value = '';
 	
-	form.name = ''
-	form.email = ''
-	form.subject = ''
-	form.message = ''
-}
+	try {
+		// replaced spaces with underscores
+		const timestampId = `${form.name.replace(/\s+/g, '_')}_${Date.now()}`;
+		
+		await setDoc(doc(db, "messages", timestampId), {
+			name: form.name,
+			email: form.email,
+			subject: form.subject,
+			message: form.message,
+			createdAt: serverTimestamp()
+		});
+		
+		messageFeedback.value = "Thank you! Your message has been sent.";
+		
+		form.name = '';
+		form.email = '';
+		form.subject = '';
+		form.message = '';
+		
+		setTimeout(() => (messageFeedback.value = ""), 5000);
+	} catch (err) {
+		console.error(err);
+		messageFeedback.value = "Failed to send your message. Please try again later.";
+	} finally {
+		isSubmitting.value = false;
+	}
+};
 </script>
 
 <template>
@@ -33,33 +60,42 @@ const handleSubmit = () => {
 						<div class="grid md:grid-cols-2 gap-6">
 							<div>
 								<label class="block text-gray-400 mb-2">Name</label>
-								<input v-model="form.name" type="text" required
+								<input v-model="form.name" type="text" placeholder="Your full name" required
 								       class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg
-                                focus:border-purple-500 focus:outline-none transition duration-300 text-gray-300">
+                       focus:border-purple-500 focus:outline-none transition duration-300 text-gray-300">
 							</div>
 							<div>
 								<label class="block text-gray-400 mb-2">Email</label>
-								<input v-model="form.email" type="email" required
+								<input v-model="form.email" type="email" placeholder="Your email" required
 								       class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg
-                                focus:border-purple-500 focus:outline-none transition duration-300 text-gray-300">
+                       focus:border-purple-500 focus:outline-none transition duration-300 text-gray-300">
 							</div>
 						</div>
 						<div>
 							<label class="block text-gray-400 mb-2">Subject</label>
-							<input v-model="form.subject" type="text" required
+							<input v-model="form.subject" type="text" placeholder="Subject" required
 							       class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg
-                              focus:border-purple-500 focus:outline-none transition duration-300 text-gray-300">
+                     focus:border-purple-500 focus:outline-none transition duration-300 text-gray-300">
 						</div>
 						<div>
 							<label class="block text-gray-400 mb-2">Message</label>
-							<textarea v-model="form.message" rows="4" required
+							<textarea v-model="form.message" rows="4" placeholder="Write your message" required
 							          class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg
-                                 focus:border-purple-500 focus:outline-none transition duration-300 text-gray-300"></textarea>
+                        focus:border-purple-500 focus:outline-none transition duration-300 text-gray-300"></textarea>
 						</div>
+						
+						<!-- Feedback -->
+						<p class="text-yellow-400 text-sm">{{ messageFeedback }}</p>
+						
 						<button type="submit"
 						        class="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600
-                             rounded-lg font-semibold transition duration-300 flex items-center">
-							<i class='bx bx-send mr-2'></i> Send Message
+                    rounded-lg font-semibold transition duration-300 flex items-center justify-center">
+							<template v-if="isSubmitting">
+								<span class="loader mr-2"></span> Sending...
+							</template>
+							<template v-else>
+								<i class='bx bx-send mr-2'></i> Send Message
+							</template>
 						</button>
 					</form>
 				</div>
@@ -161,3 +197,24 @@ const handleSubmit = () => {
 		</div>
 	</footer>
 </template>
+
+<style>
+.loader {
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-top: 2px solid white;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	animation: spin 0.8s linear infinite;
+	display: inline-block;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+</style>
