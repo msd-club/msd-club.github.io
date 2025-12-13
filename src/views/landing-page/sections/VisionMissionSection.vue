@@ -15,15 +15,15 @@
 					<div class="space-y-4">
 						<div class="flex items-start">
 							<i class='bx bx-check-shield text-purple-400 mt-1 mr-3'></i>
-							<span class="text-gray-300">Championing cutting-edge technologies</span>
+							<span class="text-gray-400">Championing cutting-edge technologies</span>
 						</div>
 						<div class="flex items-start">
 							<i class='bx bx-check-shield text-purple-400 mt-1 mr-3'></i>
-							<span class="text-gray-300">Fostering a culture of continuous learning</span>
+							<span class="text-gray-400">Fostering a culture of continuous learning</span>
 						</div>
 						<div class="flex items-start">
 							<i class='bx bx-check-shield text-purple-400 mt-1 mr-3'></i>
-							<span class="text-gray-300">Driving digital transformation initiatives</span>
+							<span class="text-gray-400">Driving digital transformation initiatives</span>
 						</div>
 					</div>
 				</div>
@@ -36,19 +36,19 @@
 					<div class="space-y-6">
 						<div class="bg-gray-900 bg-opacity-50 p-6 rounded-xl">
 							<h3 class="text-xl font-bold text-purple-300 mb-2">Develop</h3>
-							<p class="text-gray-300">Create practical software solutions that enhance campus operations, student
+							<p class="text-gray-400">Create practical software solutions that enhance campus operations, student
 								services, and community engagement at CSU-Carig</p>
 						</div>
 						<div class="bg-gray-900 bg-opacity-50 p-6 rounded-xl">
 							<h3 class="text-xl font-bold text-pink-300 mb-2">Educate</h3>
-							<p class="text-gray-300">
+							<p class="text-gray-400">
 								Provide hands-on learning opportunities in software development beyond classroom curriculum for
 								Computer Engineering students
 							</p>
 						</div>
 						<div class="bg-gray-900 bg-opacity-50 p-6 rounded-xl">
 							<h3 class="text-xl font-bold text-blue-300 mb-2">Innovate</h3>
-							<p class="text-gray-300">
+							<p class="text-gray-400">
 								Explore emerging technologies and apply them to local challenges, positioning CSU-Carig as a hub of
 								technological innovation in Cagayan Valley
 							</p>

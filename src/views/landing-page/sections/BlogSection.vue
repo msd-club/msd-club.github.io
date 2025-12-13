@@ -5,7 +5,7 @@
 				<div>
 					<h2 class="text-3xl sm:text-4xl font-bold mb-2 bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
 						Latest from Our Blog</h2>
-					<p class="text-gray-400">Tech tutorials, project documentation, and insights from CSU-Carig's Computer
+					<p class="text-gray-300 text-lg">Tech tutorials, project documentation, and insights from CSU-Carig's Computer
 						Engineering students</p>
 				</div>
 			</div>

@@ -5,7 +5,7 @@
 				<h2 class="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
 					Campus and Community Projects</h2>
 				<div class="w-32 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto mb-8"></div>
-				<p class="text-gray-500 max-w-3xl mx-auto">
+				<p class="text-gray-300 text-lg max-w-3xl mx-auto">
 					Real-world software solutions developed by Computer Engineering students of CSU-Carig
 				</p>
 			</div>

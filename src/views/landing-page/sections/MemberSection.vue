@@ -27,7 +27,7 @@ const visibleMembers = computed(() => {
 			<div class="text-center mb-16">
 				<h2 class="text-3xl sm:text-4xl font-bold mb-4">MSD Club Leadership</h2>
 				<div class="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8"></div>
-				<p class="text-gray-500 max-w-3xl mx-auto">
+				<p class="text-gray-300 text-lg max-w-3xl mx-auto">
 					Faculty guidance meets student innovation - Driving tech excellence at CSU-Carig
 				</p>
 			</div>

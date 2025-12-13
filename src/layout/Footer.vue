@@ -107,7 +107,7 @@ const handleSubmit = async () => {
 							<i class='bx bx-code-block text-3xl text-purple-400 mr-3'></i>
 							<span class="text-2xl font-bold text-gray-200">MSD Club</span>
 						</div>
-						<p class="text-gray-400 mb-6">
+						<p class="text-gray-300 mb-6">
 							Transforming ideas into elegant software solutions. Join us in building the future of our organization.
 						</p>
 						<div class="flex space-x-4">
@@ -167,7 +167,7 @@ const handleSubmit = async () => {
 								<div class="flex items-start">
 									<i class='bx bx-envelope text-purple-400 mr-3 mt-1'></i>
 									<div>
-										<div class="text-gray-300">msdclub@csu.edu.ph</div>
+										<div class="text-gray-300">edaralphmaron@gmail.com</div>
 										<div class="text-sm text-gray-500">General Inquiries</div>
 									</div>
 								</div>
