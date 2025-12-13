@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
 	<section id="blog" class="py-16 sm:py-24">
 		<div class="w-[90%] mx-auto px-4 sm:px-6">
@@ -12,9 +8,6 @@
 					<p class="text-gray-400">Tech tutorials, project documentation, and insights from CSU-Carig's Computer
 						Engineering students</p>
 				</div>
-				<a href="#" class="text-amber-400 hover:text-amber-300 flex items-center transition duration-300">
-					View All <i class='bx bx-chevron-right ml-1'></i>
-				</a>
 			</div>
 			
 			<div class="grid md:grid-cols-3 gap-8">
@@ -33,7 +26,7 @@
 							<div class="flex items-center text-gray-500 text-sm">
 								<i class='bx bx-calendar mr-2'></i> Updated recently
 							</div>
-							<button class="text-pink-400 hover:text-pink-300 flex items-center text-sm">
+							<button class="text-pink-400 hover:text-pink-300 flex items-center text-sm cursor-pointer">
 								Read More <i class='bx bx-chevron-right ml-1'></i>
 							</button>
 						</div>
@@ -55,7 +48,7 @@
 							<div class="flex items-center text-gray-500 text-sm">
 								<i class='bx bx-calendar mr-2'></i> Updated recently
 							</div>
-							<button class="text-blue-400 hover:text-blue-300 flex items-center text-sm">
+							<button class="text-blue-400 hover:text-blue-300 flex items-center text-sm cursor-pointer">
 								Read More <i class='bx bx-chevron-right ml-1'></i>
 							</button>
 						</div>
@@ -77,7 +70,7 @@
 							<div class="flex items-center text-gray-500 text-sm">
 								<i class='bx bx-calendar mr-2'></i> Updated recently
 							</div>
-							<button class="text-green-400 hover:text-green-300 flex items-center text-sm">
+							<button class="text-green-400 hover:text-green-300 flex items-center text-sm cursor-pointer">
 								Read More <i class='bx bx-chevron-right ml-1'></i>
 							</button>
 						</div>
@@ -86,7 +79,7 @@
 			</div>
 			
 			<div class="text-center mt-12">
-				<button class="px-8 py-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600
+				<button class="px-8 py-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 cursor-pointer
                          rounded-xl font-semibold transition duration-300 transform hover:scale-105 flex items-center justify-center mx-auto shadow-lg">
 					<i class='bx bx-book-open mr-3 text-xl'></i>Explore All Articles
 				</button>
